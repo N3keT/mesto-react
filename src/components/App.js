@@ -3,7 +3,7 @@ import Header from './Header';
 import Main from './Main';
 import Footer from './Footer';
 import PopupWithForm from './PopupWithForm';
-import PopupImage from './PopupImage';
+import ImagePopup from './ImagePopup';
 
 function App() {
     const [isEditProfilePopupOpen, setEditProfilePopupOpen] = React.useState(false);
@@ -48,7 +48,7 @@ function App() {
                 onCardClick={handleCardClick}
                 />
             <Footer />
-            <PopupImage
+            <ImagePopup
                 card={selectedCard}
                 onClose={closeAllPopups}
             />
