@@ -69,21 +69,13 @@ class Api {
         .then(this._checkResponse);
     }
 
-    addLike(cardId) {
+    changeLikeCardStatus(cardId, likeCardStatus) {
         return fetch(`https://mesto.nomoreparties.co/v1/cohort-52/cards/${cardId}/likes`, {
-            method: "PUT",
-            headers: this._headers
+          method: (likeCardStatus ? "PUT": "DELETE"),
+          headers: this._headers
         })
         .then(this._checkResponse);
-    }
-
-    deleteLike(cardId) {
-        return fetch(`https://mesto.nomoreparties.co/v1/cohort-52/cards/${cardId}/likes`, {
-            method: "DELETE",
-            headers: this._headers
-        })
-        .then(this._checkResponse);
-    }
+      }
 }
 
 const api = new Api({
