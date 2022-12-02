@@ -25,38 +25,38 @@ function AddPlacePopup(props) {
 
     return (
         <PopupWithForm
-                        isOpen={props.isOpen}
-                        onClose={props.onClose}
-                        name='add'
-                        title='Новое место'
-                        button='Создать'
-                        onSubmit={handleSubmit}
-                    >
-                        <input
-                            type="text"
-                            name="name" 
-                            id="foto" 
-                            className="popup__input popup__input_type_name" 
-                            placeholder="Название"
-                            minLength="2"
-                            maxLength="30"
-                            required
-                            value={name || ''}
-                            onChange={handleChangeName}
-                        />
-                        <span className="popup__input-error popup__input-error_field_place"></span>
-                        <input
-                            type="url"
-                            name="link"
-                            id="link"
-                            className="popup__input popup__input_type_about"
-                            placeholder="Ссылка на картинку"
-                            required
-                            value={link || ''}
-                            onChange={handleChangeLink}
-                        />
-                        <span className="popup__input-error popup__input-error_field_link"></span>
-                    </PopupWithForm>
+            isOpen={props.isOpen}
+            onClose={props.onClose}
+            name='add'
+            title='Новое место'
+            button='Создать'
+            onSubmit={handleSubmit}
+        >
+            <input
+                type="text"
+                name="name" 
+                id="foto" 
+                className="popup__input popup__input_type_name" 
+                placeholder="Название"
+                minLength="2"
+                maxLength="30"
+                required
+                value={name || ''}
+                onChange={handleChangeName}
+            />
+            <span className="popup__input-error popup__input-error_field_place"></span>
+            <input
+                type="url"
+                name="link"
+                id="link"
+                className="popup__input popup__input_type_about"
+                placeholder="Ссылка на картинку"
+                required
+                value={link || ''}
+                onChange={handleChangeLink}
+            />
+            <span className="popup__input-error popup__input-error_field_link"></span>
+        </PopupWithForm>
     );
 }
 

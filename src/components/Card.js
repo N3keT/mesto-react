@@ -27,7 +27,7 @@ function Card(props) {
     return (
         <li>
             <div className="element">
-                <img className="element__foto" style={{ backgroundImage: `url(${props.link})` }} onClick={handleOnCardClick} />
+                <img className="element__foto" src={props.link} alt={props.name} onClick={handleOnCardClick} />
                 <div className="element__place">
                     <h2 className="element__place-name">{props.name}</h2>
                     <div className="element__like-container">
